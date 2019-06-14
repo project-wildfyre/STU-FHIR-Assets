@@ -1,0 +1,419 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "3",
+    "url": "https://fhir.gov.uk/DWP/STU3/Questionnaire/esa50",
+    "identifier": [
+        {
+            "system": "https://fhir.gov.uk/DWP/Questionnaire",
+            "value": "esa50"
+        }
+    ],
+    "name": "Capability for Work questionnaire (ESA50)",
+    "title": "Capability for Work questionnaire (ESA50)",
+    "status": "draft",
+    "publisher": "Department for Work and Pensions",
+    "description": "Healthcare Professionals Form for ESA",
+    "purpose": "https://www.gov.uk/government/publications/esa113-interactive-for-use-by-healthcare-practitioners",
+    "subjectType": [
+        "Patient"
+    ],
+    "item": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "Roughly page 2"
+                }
+            ],
+            "linkId": "part0a",
+            "text": "Additional Demographics",
+            "type": "group",
+            "repeats": false,
+            "item": [
+                {
+                    "linkId": "pg2ni",
+                    "text": "What is your NI Number",
+                    "type": "string"
+                },
+                {
+                    "linkId": "pg2mod",
+                    "text": "Armed Forces",
+                    "type": "group",
+                    "item" : [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                                    "valueCode": "Observation"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                                    "valueReference": {
+                                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                                    }
+                                }
+                            ],
+                            "linkId": "pg2mod1",
+                            "code": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "753651000000107",
+                                    "display": "Military veteran"
+                                }
+                            ],
+                            "text": "Have you served in HM Forces?",
+                            "type": "reference"
+                        },
+                        {
+                            "linkId": "pg2mod2",
+                           
+                            "text": "What date did you leave?",
+                            "type": "date",
+                            "enableWhen": {
+                                "question": "pg2mod1",
+                                "hasAnswer": true
+                            }
+                        },
+                        {
+                            "linkId": "pg2mod3",
+                            "text": "What was your service number",
+                            "type": "string",
+                            "enableWhen": {
+                                "question": "pg2mod1",
+                                "hasAnswer": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "pg2hmp",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "45361006",
+                            "display": "Imprisonment"
+                        }
+                    ],
+                    "text": "Have you been released from prison in the last 6 months?",
+                    "type": "reference"
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        },
+                        
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                            "valueMarkdown": "This is in the wrong section - it's not demographics"
+                        }
+                    
+                    ],
+                    "linkId": "pg2preg1",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "77386006",
+                            "display": "Pregnant"
+                        }
+                    ],
+                    "text": "Are you pregnant",
+                    "type": "reference"
+                },
+                {
+                    "linkId": "pg2preg2",
+                    "text": "When are you due?",
+                    "type": "date",
+                    "enableWhen": {
+                        "question": "pg2preg1",
+                        "hasAnswer": true
+                    }
+                }
+
+             ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "Combination of all information contained on pages 3->7. This looks like it is a medical report."
+                }
+            ],
+            "linkId": "part0b",
+            "text": "Medical Information",
+            "type": "group",
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                            "valueMarkdown": "This is a version of page 4 questions. Have expanded to include Organisation (Hospital) and HealthService (Department in Hospital)"
+                        }
+                    ],
+                    "linkId": "part0",
+                    "text": "CareTeam includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.",
+                    "type": "group",
+                    "repeats": true,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                                    "valueCode": "Practitioner"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                                    "valueReference": {
+                                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1"
+                                    }
+                                }
+                            ],
+                            "linkId": "pg3pg4",
+                            "text": "GP, Consultants, Social Worker or Carer",
+                            "type": "reference",
+                            "repeats": false
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                                    "valueCode": "HealthcareService"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                                    "valueReference": {
+                                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-HealthcareService-1"
+                                    }
+                                }
+                            ],
+                            "linkId": "pg4q2",
+                            "text": "Service at a hospital",
+                            "type": "reference",
+                            "repeats": false
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                                    "valueCode": "Organization"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                                    "valueReference": {
+                                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1"
+                                    }
+                                }
+                            ],
+                            "linkId": "pg4q3",
+                            "text": "Hospital providing you care",
+                            "type": "reference",
+                            "repeats": false
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Condition"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1"
+                            }
+                        }
+                    ],
+                    "linkId": "pg5q1",
+                    "text": "About your disabilities, illnesses or health conditions",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "MedicationStatement"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1"
+                            }
+                        }
+                    ],
+                    "linkId": "pg6q1",
+                    "text": "Medications (Current)",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Encounter"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1"
+                            }
+                        }
+                    ],
+                    "linkId": "pg6q1",
+                    "text": "Admissions (last 12 months over 28 days)",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Procedure"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1"
+                            }
+                        }
+                    ],
+                    "linkId": "pg6q1",
+                    "text": "Procedure (Planned)",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "CarePlan"
+                        }
+                    ],
+                    "linkId": "pg5note1",
+                    "text": "Management - Reports, care or treatment plans about you",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "DiagnosticReport"
+                        }
+                    ],
+                    "linkId": "pg5note1",
+                    "text": "Investigations - Scans, audiology and results of x-rays",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "pg5q2",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "8510008",
+                            "display": "Reduced Mobility"
+                        }
+                    ],
+                    "text": "Reduced Mobility",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "pg5q3",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "302291005",
+                            "display": "Finding of hearing aid"
+                        }
+                    ],
+                    "text": "Finding of hearing aid",
+                    "type": "reference",
+                    "repeats": true
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "Not shown - see MED113 Section 4 for example questions"
+                }
+            ],
+            "linkId": "part1",
+            "text": "Physical functions",
+            "type": "group",
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "Not shown - see MED113 Section 4 for example questions"
+                }
+            ],
+            "linkId": "part2",
+            "text": "Mental, cognitive and intellectual capabilities",
+            "type": "group",
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "Not shown - see MED113 Section 4 for example questions"
+                }
+            ],
+            "linkId": "part3",
+            "text": "Eating and Drinking",
+            "type": "group",
+            "repeats": false
+        }
+    ]
+}

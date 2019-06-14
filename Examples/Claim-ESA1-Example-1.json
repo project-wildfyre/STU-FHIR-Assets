@@ -1,0 +1,74 @@
+{
+    "resourceType": "Claim",
+    "extension": [
+        {
+            "url": "https://fhir.gov.uk/Extension/claimEntererPatient",
+            "valueReference": {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/nhs-number",
+                    "value": "9658218873"
+                }
+            }
+        }
+    ],
+    "identifier": [
+        {
+            "system": "https://fhir.gov.uk/Id/Claim",
+            "value": "9612345"
+        }
+    ],
+    "status": "active",
+    "type": {
+        "coding": [
+            {
+                "system": "https://fhir.gov.uk/CodeSystem/ClaimType",
+                "code": "esa1"
+            }
+        ]
+    },
+    "use": "complete",
+    "patient": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9658218873"
+        }
+    },
+    "created": "2019-05-28",
+    "organization": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-site-code",
+            "value": "X24"
+        },
+        "display": "NHS England"
+    },
+    "priority": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/processpriority",
+                "code": "normal"
+            }
+        ]
+    },
+    "diagnosis": [
+        {
+            "diagnosisReference": {
+                "identifier": [
+                    {
+                        "system": "https://tools.ietf.org/html/rfc4122",
+                        "value": "49e65c66-8c9f-4d54-a90d-a556e0e43f04"
+                    }
+                ]
+            }
+        },
+        {
+            "diagnosisReference": {
+               "identifier": [
+                    {
+                        "system": "https://tools.ietf.org/html/rfc4122",
+                        "value": "967d26cb-10cd-4291-9d5c-30ac79e42719"
+                    }
+                ]
+            }
+        }
+    ]
+}

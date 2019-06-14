@@ -1,0 +1,576 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "2",
+    "meta": {
+        "lastUpdated": "2019-04-05T10:00:59.405+00:00"
+    },
+    "url": "https://fhir.gov.uk/DWP/STU3/Questionnaire/esa113",
+    "identifier": [
+        {
+            "system": "https://fhir.gov.uk/DWP/Questionnaire",
+            "value": "esa113"
+        }
+    ],
+    "name": "Healthcare Professionals Form for ESA (ESA113)",
+    "title": "Healthcare Professionals Form for ESA (ESA113)",
+    "status": "draft",
+    "publisher": "Department for Work and Pensions",
+    "description": "Healthcare Professionals Form for ESA",
+    "purpose": "https://www.gov.uk/government/publications/esa113-interactive-for-use-by-healthcare-practitioners",
+    "subjectType": [
+        "Patient"
+    ],
+    "item": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                    "valueCode": "Encounter"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                    "valueReference": {
+                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1"
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "Last (Practitioner) Encounter with the Patient"
+                }
+            ],
+            "linkId": "1",
+            "text": "When did your patient last see a GP?.",
+            "type": "reference",
+            "repeats": false
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "Please give us details of those conditions which may have a significant effect on the person’s capacity to work. Please include: <br> * Relevant symptoms and signs, including side effects of medication, with dates. For mental healthconditions, please provide brief mental state examination findings, if available.<br> * Past, present and planned investigations and management, including medication, where relevant. If you are sending a computerised printout of current medication you do not need to list this here."
+                }
+            ],
+            "linkId": "2",
+            "text": "Current conditions affecting ability to work",
+            "type": "group",
+            "repeats": true,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Condition"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1"
+                            }
+                        }
+                    ],
+                    "linkId": "2.1",
+                    "text": "Condition",
+                    "type": "reference",
+                    "repeats": false
+                },
+                {
+                    "linkId": "2.2",
+                    "text": "Symptoms and signs",
+                    "type": "string",
+                    "repeats": false
+                },
+                {
+                    "linkId": "2.3",
+                    "text": "Investigations and management, including medication",
+                    "type": "group",
+                    "repeats": false,
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                                    "valueCode": "MedicationStatement"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                                    "valueReference": {
+                                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1"
+                                    }
+                                }
+                            ],
+                            "linkId": "2.3.1",
+                            "text": "Medications (Current)",
+                            "type": "reference",
+                            "repeats": true
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                                    "valueCode": "CarePlan"
+                                }
+                            ],
+                            "linkId": "2.3.2",
+                            "text": "Management",
+                            "type": "reference",
+                            "repeats": true
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                                    "valueCode": "DiagnosticReport"
+                                }
+                            ],
+                            "linkId": "2.3.3",
+                            "text": "Investigations",
+                            "type": "reference",
+                            "repeats": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                    "valueCode": "Condition"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                    "valueReference": {
+                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1"
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "Repeating group of conditions NOT effecting ability to work."
+                }
+            ],
+            "linkId": "3",
+            "text": "Conditions NOT effecting ability to work",
+            "type": "reference",
+            "repeats": true
+        },
+        {
+            "linkId": "4",
+            "text": "Patient Dificulties Assessment",
+            "type": "group",
+            "repeats": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.1",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "719232003",
+                            "display": "Difficulty walking"
+                        }
+                    ],
+                    "text": "Difficulty walking",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.2",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "302002000",
+                            "display": "Difficulty moving"
+                        }
+                    ],
+                    "text": "Difficulty moving",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.3",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "714882001",
+                            "display": "Finding related to ability to transfer location"
+                        }
+                    ],
+                    "text": "Finding related to ability to transfer location",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.4",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "364881003",
+                            "display": "Finding related to ability to reach"           
+                        }
+                    ],
+                    "text": "Finding related to ability to reach",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.5",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "365145008",
+                            "display": "Finding related to ability to pick up objects"
+                        }
+                    ],
+                    "text": "Finding related to ability to pick up objects",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.6",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "364972005",
+                            "display": "Finding related to ability to perform hand functions"            
+                        }
+                    ],
+                    "text": "Finding related to ability to perform hand functions",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.7",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "118231006",
+                            "display": "Communication finding"
+                        }
+                    ],
+                    "text": "Communication finding",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.8",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "300387008",
+                            "display": "Finding of bowel continence"
+                        }
+                    ],
+                    "text": "Finding of bowel continence",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.9",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "106138009",
+                            "display": "Learning finding"
+                        }
+                    ],
+                    "text": "Learning finding",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.10",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "248075006",
+                            "display": "Non-awareness of common dangers"
+                        }
+                    ],
+                    "text": "Non-awareness of common dangers",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.11",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "129874008",
+                            "display": "Social interaction finding" 
+                        }
+                    ],
+                    "text": "Social interaction finding",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.12",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "1068911000000101",
+                            "display": "Difficulty recognising social cues"
+                        }
+                    ],
+                    "text": "Difficulty recognising social cues",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.13",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "110292000",
+                            "display": "Difficulty eating"
+                        }
+                    ],
+                    "text": "Difficulty eating",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "linkId": "4.14",
+                    "code": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "364778002",
+                            "display": "Finding of drinking ability"
+                        }
+                    ],
+                    "text": "Finding of drinking ability",
+                    "type": "reference",
+                    "repeats": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                            "valueMarkdown": "Provide a brief explanation if your patient has difficulties with any of the following activities:"
+                        }
+                    ],
+                    "linkId": "4.15",
+                    "text": "Difficulties Notes",
+                    "type": "string",
+                    "repeats": false
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                    "valueCode": "Observation"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                    "valueReference": {
+                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "Tell us about their behaviour within the last 5 years, and whether they have been identified by the Zero Tolerance (Violent Behaviour) Initiative. Use the space below at Part 7. <br> The purpose of this section is to identify those patients who may pose a threat to a healthcare professional if invited to a face-to-face assessment."
+                }
+            ],
+            "linkId": "5",
+            "code": [
+                {
+                    "system": "http://snomed.info/sct",
+                        "code": "284614009",
+                        "display": "Threatening behavior"
+                }
+            ],
+            "text": "Threatening Behaviour",
+            "type": "reference"
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "A small number of patients are unable to travel to an examination centre, and may be offered a taxi or assessment in their own home if required. Patients who travel to an examination centre are entitled to claim travelling expenses.Please tell us why at Part 7."
+                }
+            ],
+            "linkId": "6",
+            "text": "Could your patient travel to an examination centre by public transport or taxi?",
+            "type": "choice",
+            "options": {
+                "reference": "http://hl7.org/fhir/ValueSet/yesnodontknow"
+              }
+        },
+        {
+           
+            "linkId": "7",
+            "text": "Additional information",
+            "type": "string"
+        }
+    ]
+
+}

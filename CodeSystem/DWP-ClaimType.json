@@ -1,0 +1,23 @@
+{
+    "resourceType": "CodeSystem",
+    "url": "https://fhir.gov.uk/CodeSystem/ClaimType",
+    "version": "1.0.0",
+    "name": "DWP Claim Types",
+    "status": "draft",
+    "date": "2019-05-30T00:00:00+00:00",
+    "publisher": "UK Department for Work and Pensions",
+    "description": "A CodeSystem for types of DWP Claims",
+    "copyright": "Copyright © 2019 HL7 UK",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "esa1",
+            "display": "ESA1"
+        },
+        {
+            "code": "med3",
+            "display": "Sick Note"
+        }
+    ]
+}

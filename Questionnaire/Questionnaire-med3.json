@@ -1,0 +1,242 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "1",
+    "meta": {
+        "lastUpdated": "2019-04-05T10:00:59.405+00:00"
+    },
+    "url": "https://fhir.gov.uk/DWP/STU3/Questionnaire/med3",
+    "identifier": [
+        {
+            "system": "https://fhir.gov.uk/DWP/Questionnaire",
+            "value": "med3"
+        }
+    ],
+    "name": "Sick Note",
+    "title": "Sick Note",
+    "status": "draft",
+    "publisher": "Department for Work and Pensions",
+    "description": "Fit for Work - Sick Note (med3)",
+    "purpose": "https://www.gov.uk/government/collections/fit-note",
+    "subjectType": [
+        "Patient"
+    ],
+    "item": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                    "valueCode": "Condition"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                    "valueReference": {
+                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1"
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                    "valueMarkdown": "Repeating group of conditions effecting ability to work."
+                }
+            ],
+            "linkId": "1",
+            "text": "Conditions effecting ability to work",
+            "type": "reference",
+            "repeats": true
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                    "valueCode": "Observation"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                    "valueReference": {
+                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                    }
+                }
+            ],
+            "linkId": "2",
+            "code": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "160910001",
+                    "display": "Unfit for work"
+                },
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "225891002",
+                    "display": "Fit for work with restrictions"
+                }
+            ],
+            "text": "Fitness for work Decision",
+            "type": "reference",
+            "repeats": false
+        },
+        {
+            "linkId": "3",
+            "text": "Fit to work with restrictions",
+            "type": "group",
+            "enableWhen": {
+                "question": "2",
+                "hasAnswer": true,
+                "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "225891002",
+                    "display": "Fit for work with restrictions"
+                }
+            },
+            "repeats": false,
+            "item": [
+                {
+                    "linkId": "3.1",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "code": [
+                        {
+                          
+                                "system": "http://snomed.info/sct",
+                                "code": "775301000000104",
+                                "display": "Recommend altered hours"
+                           
+                        }
+                    ],
+                    "text": "Recommend altered hours",
+                    "type": "reference"
+                  
+                },
+                {
+                    "linkId": "3.2",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "code": [
+                       
+                        {
+                           
+                                "system": "http://snomed.info/sct",
+                                "code": "775281000000100",
+                                "display": "Recommend phased return to work"
+                      
+                        }
+                    ],
+                    "text": "Recommend phased return to work",
+                    "type": "reference"
+                  
+                },
+                {
+                    "linkId": "3.3",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "code": [
+                        {
+                          
+                                "system": "http://snomed.info/sct",
+                                "code": "775351000000103",
+                                "display": "Recommend workplace adaptation"
+                          
+                        }
+                    ],
+                    "text": "Recommend workplace adaptation",
+                    "type": "reference"
+                  
+                },
+                {
+                    "linkId": "3.4",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                            "valueReference": {
+                                "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                            }
+                        }
+                    ],
+                    "code": [
+                
+                        {
+                          
+                                "system": "http://snomed.info/sct",
+                                "code": "775321000000108",
+                                "display": "Recommend amended duties"
+                          
+                        }
+                    ],
+                    "text": "Recommend amended duties",
+                    "type": "reference"
+                  
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/designNote",
+                            "valueMarkdown": "The important information to include in this box is advice about the functional effects of your patient’s condition on their fitness for work. discuss possible adaptations and changes toaccommodate your advice."
+                        }
+                    ],
+                    "linkId": "3.5",
+                    "text": "Comments including functional effects of your condition (Maybe a redundant question?)",
+                    "type": "string",
+                    "repeats": false
+                }
+            ]
+        },
+        {
+            "linkId": "4",
+            "text": "Duration (This isn't needed as it can move to the Observations for codes 160910001 and 225891002",
+            "type": "group",
+            "repeats": false,
+            "item": [
+                {
+                    "linkId": "4.1",
+                    "text": "Duration - Text",
+                    "type": "string",
+                    "repeats": false
+                },
+                {
+                    "linkId": "4.2",
+                    "text": "From",
+                    "type": "date",
+                    "repeats": false
+                },
+                {
+                    "linkId": "4.3",
+                    "text": "To",
+                    "type": "date",
+                    "repeats": false
+                }
+            ]
+        }
+    ]
+}

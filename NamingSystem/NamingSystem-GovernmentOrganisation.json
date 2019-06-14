@@ -1,0 +1,18 @@
+{
+  "resourceType": "NamingSystem",
+  "name": "Government Organisations",
+  "status": "draft",
+  "kind": "identifier",
+  "date": "2019-05-21",
+  "publisher": "Department of Work and Pensions",
+  "responsible": "Department of Work and Pensions",
+  "description": "The unique code for a government organisation. https://www.registers.service.gov.uk/registers/government-organisation",
+  "usage": "Used to represent UK Gov organisations in healthcare interfaces",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "https://fhir.gov.uk/Id/government-organisation",
+      "preferred": true
+    }
+  ]
+}

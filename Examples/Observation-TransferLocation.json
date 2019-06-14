@@ -1,0 +1,37 @@
+{
+    "resourceType": "Observation",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "714882001",
+                "display": "Finding related to ability to transfer location"
+            }
+        ]
+    },
+    "subject": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9658218873"
+        }
+    },
+    "effectiveDateTime": "2019-06-01T22:33:22Z",
+    "performer": [
+        {
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/sds-user-id",
+                "value": "G13579135"
+            }
+        }
+    ],
+    "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "714889005",
+            "display": "Ability to transfer from bed to chair"
+          }
+        ]
+      }
+}

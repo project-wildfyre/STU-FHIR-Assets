@@ -1,0 +1,451 @@
+<Bundle xmlns="http://hl7.org/fhir">
+   <identifier>
+      <system value="https://tools.ietf.org/html/rfc4122"></system>
+      <value value="d0636b78-6254-4806-8a59-b111149fa176"></value>
+   </identifier>
+   <type value="collection"></type>
+   <entry>
+      <fullUrl value="urn:uuid:2f88064f-8dc3-4763-af75-94faf6b08b18"></fullUrl>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="2f88064f-8dc3-4763-af75-94faf6b08b18"></id>
+            <meta>
+               <lastUpdated value="2018-11-14T16:25:58.346+00:00"></lastUpdated>
+               <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1"></profile>
+            </meta>
+            <identifier>
+               <extension url="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
+                  <valueCodeableConcept>
+                     <coding>
+                        <system value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-NHSNumberVerificationStatus-1"></system>
+                        <code value="01"></code>
+                        <display value="Number present and verified"></display>
+                     </coding>
+                  </valueCodeableConcept>
+               </extension>
+               <system value="https://fhir.nhs.uk/Id/nhs-number"></system>
+               <value value="9658218873"></value>
+            </identifier>
+            <active value="true"></active>
+            <name>
+               <use value="official"></use>
+               <family value="MEAKIN"></family>
+               <given value="Mike"></given>
+               <prefix value="MR"></prefix>
+            </name>
+            <gender value="male"></gender>
+            <birthDate value="1927-06-19"></birthDate>
+            <address>
+               <use value="home"></use>
+               <type value="physical"></type>
+            </address>
+            <maritalStatus>
+               <coding>
+                  <system value="http://hl7.org/fhir/v3/MaritalStatus"></system>
+                  <code value="S"></code>
+                  <display value="Never Married"></display>
+               </coding>
+            </maritalStatus>
+            <generalPractitioner>
+               <reference value="urn:uuid:14f93146-93b8-4bcd-94bf-5ed0a2493205"></reference>
+               <display value="Miss Nichole Gilbert"></display>
+            </generalPractitioner>
+            <managingOrganization>
+               <reference value="urn:uuid:0a9af0b8-a351-4243-8863-b8e3e6febda4"></reference>
+            </managingOrganization>
+         </Patient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:0a9af0b8-a351-4243-8863-b8e3e6febda4"></fullUrl>
+      <resource>
+         <Organization xmlns="http://hl7.org/fhir">
+            <id value="0a9af0b8-a351-4243-8863-b8e3e6febda4"></id>
+            <meta>
+               <lastUpdated value="2018-10-14T15:26:59.755+00:00"></lastUpdated>
+               <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1"></profile>
+            </meta>
+            <identifier>
+               <system value="https://fhir.nhs.uk/Id/ods-organization-code"></system>
+               <value value="A20047"></value>
+            </identifier>
+            <active value="false"></active>
+            <name value="HSCIC test Practice"></name>
+            <telecom>
+               <system value="phone"></system>
+               <use value="work"></use>
+            </telecom>
+            <address>
+               <use value="work"></use>
+            </address>
+         </Organization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:14f93146-93b8-4bcd-94bf-5ed0a2493205"></fullUrl>
+      <resource>
+         <Practitioner xmlns="http://hl7.org/fhir">
+            <id value="14f93146-93b8-4bcd-94bf-5ed0a2493205"></id>
+            <meta>
+               <lastUpdated value="2018-10-09T12:59:30.104+00:00"></lastUpdated>
+               <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1"></profile>
+            </meta>
+            <identifier>
+               <system value="https://fhir.nhs.uk/Id/sds-user-id"></system>
+               <value value="G13579135"></value>
+            </identifier>
+            <active value="false"></active>
+            <name>
+               <family value="Gilbert"></family>
+               <given value="Nichole"></given>
+               <prefix value="Miss"></prefix>
+            </name>
+         </Practitioner>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:1eee41de-81f9-4de6-b980-520a8a41a20f"></fullUrl>
+      <resource>
+         <Organization xmlns="http://hl7.org/fhir">
+            <id value="1eee41de-81f9-4de6-b980-520a8a41a20f"></id>
+            <meta>
+               <lastUpdated value="2018-11-20T00:00:00+00:00"></lastUpdated>
+               <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ODSAPI-Organization-1"></profile>
+            </meta>
+            <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-ActivePeriod-1">
+               <valuePeriod>
+                  <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-DateType-1">
+                     <valueString value="Operational"></valueString>
+                  </extension>
+                  <start value="2006-07-01"></start>
+               </valuePeriod>
+            </extension>
+            <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-OrganizationRole-1">
+               <extension url="role">
+                  <valueCoding>
+                     <system value="https://directory.spineservices.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRole-1"></system>
+                     <code value="197"></code>
+                     <display value="NHS TRUST"></display>
+                  </valueCoding>
+               </extension>
+               <extension url="primaryRole">
+                  <valueBoolean value="true"></valueBoolean>
+               </extension>
+               <extension url="activePeriod">
+                  <valuePeriod>
+                     <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-DateType-1">
+                        <valueString value="Operational"></valueString>
+                     </extension>
+                     <start value="2006-07-01"></start>
+                  </valuePeriod>
+               </extension>
+               <extension url="status">
+                  <valueString value="Active"></valueString>
+               </extension>
+            </extension>
+            <identifier>
+               <system value="https://fhir.nhs.uk/Id/ods-organization-code"></system>
+               <value value="RX8"></value>
+            </identifier>
+            <active value="true"></active>
+            <type>
+               <coding>
+                  <system value="https://fhir.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRecordClass-1"></system>
+                  <code value="1"></code>
+                  <display value="HSCOrg"></display>
+               </coding>
+            </type>
+            <name value="YORKSHIRE AMBULANCE SERVICE NHS TRUST"></name>
+            <address>
+               <line value="SPRINGHILL 2,"></line>
+               <line value="WAKEFIELD 41 INDUSTRIAL ESTATE"></line>
+               <line value="BRINDLEY WAY"></line>
+               <city value="WAKEFIELD"></city>
+               <district value="WEST YORKSHIRE"></district>
+               <postalCode value="WF2 0XQ"></postalCode>
+               <country value="ENGLAND"></country>
+            </address>
+         </Organization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:1295a128-546f-4429-af47-64364f91511c"></fullUrl>
+      <resource>
+         <Organization xmlns="http://hl7.org/fhir">
+            <id value="1295a128-546f-4429-af47-64364f91511c"></id>
+            <meta>
+               <lastUpdated value="2018-08-29T00:00:00+00:00"></lastUpdated>
+               <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ODSAPI-Organization-1"></profile>
+            </meta>
+            <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-ActivePeriod-1">
+               <valuePeriod>
+                  <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-DateType-1">
+                     <valueString value="Operational"></valueString>
+                  </extension>
+                  <start value="1998-04-01"></start>
+               </valuePeriod>
+            </extension>
+            <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-OrganizationRole-1">
+               <extension url="role">
+                  <valueCoding>
+                     <system value="https://directory.spineservices.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRole-1"></system>
+                     <code value="197"></code>
+                     <display value="NHS TRUST"></display>
+                  </valueCoding>
+               </extension>
+               <extension url="primaryRole">
+                  <valueBoolean value="true"></valueBoolean>
+               </extension>
+               <extension url="activePeriod">
+                  <valuePeriod>
+                     <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-DateType-1">
+                        <valueString value="Operational"></valueString>
+                     </extension>
+                     <start value="1998-04-01"></start>
+                  </valuePeriod>
+               </extension>
+               <extension url="status">
+                  <valueString value="Active"></valueString>
+               </extension>
+            </extension>
+            <identifier>
+               <system value="https://fhir.nhs.uk/Id/ods-organization-code"></system>
+               <value value="RR8"></value>
+            </identifier>
+            <active value="true"></active>
+            <type>
+               <coding>
+                  <system value="https://fhir.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRecordClass-1"></system>
+                  <code value="1"></code>
+                  <display value="HSCOrg"></display>
+               </coding>
+            </type>
+            <name value="LEEDS TEACHING HOSPITALS NHS TRUST"></name>
+            <telecom>
+               <system value="fax"></system>
+               <value value="0113 242 6496"></value>
+            </telecom>
+            <telecom>
+               <system value="phone"></system>
+               <value value="0113 243 3144"></value>
+            </telecom>
+            <address>
+               <line value="ST. JAMES'S UNIVERSITY HOSPITAL"></line>
+               <line value="BECKETT STREET"></line>
+               <city value="LEEDS"></city>
+               <district value="WEST YORKSHIRE"></district>
+               <postalCode value="LS9 7TF"></postalCode>
+               <country value="ENGLAND"></country>
+            </address>
+         </Organization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:efbe15fb-a700-4958-874c-b15f5cab35a9"></fullUrl>
+      <resource>
+         <Organization xmlns="http://hl7.org/fhir">
+            <id value="efbe15fb-a700-4958-874c-b15f5cab35a9"></id>
+            <meta>
+               <lastUpdated value="2018-11-26T00:00:00+00:00"></lastUpdated>
+               <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ODSAPI-Organization-1"></profile>
+            </meta>
+            <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-ActivePeriod-1">
+               <valuePeriod>
+                  <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-DateType-1">
+                     <valueString value="Operational"></valueString>
+                  </extension>
+                  <start value="2002-04-01"></start>
+               </valuePeriod>
+            </extension>
+            <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-OrganizationRole-1">
+               <extension url="role">
+                  <valueCoding>
+                     <system value="https://directory.spineservices.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRole-1"></system>
+                     <code value="197"></code>
+                     <display value="NHS TRUST"></display>
+                  </valueCoding>
+               </extension>
+               <extension url="primaryRole">
+                  <valueBoolean value="true"></valueBoolean>
+               </extension>
+               <extension url="activePeriod">
+                  <valuePeriod>
+                     <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-DateType-1">
+                        <valueString value="Operational"></valueString>
+                     </extension>
+                     <start value="2002-04-01"></start>
+                  </valuePeriod>
+               </extension>
+               <extension url="status">
+                  <valueString value="Active"></valueString>
+               </extension>
+            </extension>
+            <identifier>
+               <system value="https://fhir.nhs.uk/Id/ods-organization-code"></system>
+               <value value="RXF"></value>
+            </identifier>
+            <active value="true"></active>
+            <type>
+               <coding>
+                  <system value="https://fhir.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRecordClass-1"></system>
+                  <code value="1"></code>
+                  <display value="HSCOrg"></display>
+               </coding>
+            </type>
+            <name value="MID YORKSHIRE HOSPITALS NHS TRUST"></name>
+            <telecom>
+               <system value="fax"></system>
+               <value value="01924 814929"></value>
+            </telecom>
+            <telecom>
+               <system value="phone"></system>
+               <value value="01924 213850"></value>
+            </telecom>
+            <address>
+               <line value="PINDERFIELDS HOSPITAL"></line>
+               <line value="ABERFORD ROAD"></line>
+               <city value="WAKEFIELD"></city>
+               <district value="WEST YORKSHIRE"></district>
+               <postalCode value="WF1 4DG"></postalCode>
+               <country value="ENGLAND"></country>
+            </address>
+         </Organization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:780d64f8-c06a-4b9a-bd0a-f987f0f8e34b"></fullUrl>
+      <resource>
+         <Condition xmlns="http://hl7.org/fhir">
+            <id value="780d64f8-c06a-4b9a-bd0a-f987f0f8e34b"></id>
+            <identifier>
+               <system value="https://fhir.yas.nhs.uk/Condition/Identifier"></system>
+               <value value="12732"></value>
+            </identifier>
+            <clinicalStatus value="active"></clinicalStatus>
+            <verificationStatus value="confirmed"></verificationStatus>
+            <code>
+               <coding>
+                  <system value="http://snomed.info/sct"></system>
+                  <code value="217133004"></code>
+                  <display value="Fall into quarry"></display>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:2f88064f-8dc3-4763-af75-94faf6b08b18"></reference>
+            </subject>
+            <assertedDate value="2018-11-29T07:39:18+00:00"></assertedDate>
+            <asserter>
+               <reference value="urn:uuid:2f88064f-8dc3-4763-af75-94faf6b08b18"></reference>
+            </asserter>
+         </Condition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:4ebf5635-7bae-4051-80e4-5e7e06a2e055"/>
+      <resource>
+         <Condition xmlns="http://hl7.org/fhir">
+            <id value="4ebf5635-7bae-4051-80e4-5e7e06a2e055"/>
+            <meta>
+               <lastUpdated value="2019-02-23T13:38:33.785+00:00"/>
+               <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1"/>
+            </meta>
+            <identifier>
+               <system value="https://tools.ietf.org/html/rfc4122"/>
+               <value value="4ebf5635-7bae-4051-80e4-5e7e06a2e055"/>
+            </identifier>
+            <clinicalStatus value="active"/>
+            <category>
+               <coding>
+                  <system value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1"/>
+                  <code value="presenting-complaint"/>
+                  <display value="Presenting Complaint"/>
+               </coding>
+               <text value="Presenting Complaint"/>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="29857009"/>
+                  <display value="Chest pain"/>
+               </coding>
+               <text value="Chest pain"/>
+            </code>
+            <subject>
+               <reference value="urn:uuid:2f88064f-8dc3-4763-af75-94faf6b08b18"></reference>
+            </subject>
+         </Condition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:967d26cb-10cd-4291-9d5c-30ac79e42719"/>
+      <resource>
+         <Condition xmlns="http://hl7.org/fhir">
+            <id value="967d26cb-10cd-4291-9d5c-30ac79e42719"/>
+            <meta>
+               <lastUpdated value="2019-02-23T13:38:36.715+00:00"/>
+               <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1"/>
+            </meta>
+            <identifier>
+               <system value="https://tools.ietf.org/html/rfc4122"/>
+               <value value="967d26cb-10cd-4291-9d5c-30ac79e42719"/>
+            </identifier>
+            <clinicalStatus value="active"/>
+            <category>
+               <coding>
+                  <system value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1"/>
+                  <code value="encounter-diagnosis"/>
+                  <display value="Encounter Diagnosis"/>
+               </coding>
+               <text value="Encounter Diagnosis"/>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="53741008"/>
+                  <display value="Coronary arteriosclerosis"/>
+               </coding>
+               <text value="Coronary arteriosclerosis"/>
+            </code>
+            <subject>
+               <reference value="urn:uuid:2f88064f-8dc3-4763-af75-94faf6b08b18"></reference>
+            </subject>
+         </Condition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:49e65c66-8c9f-4d54-a90d-a556e0e43f04"/>
+      <resource>
+         <Condition xmlns="http://hl7.org/fhir">
+            <id value="49e65c66-8c9f-4d54-a90d-a556e0e43f04"/>
+            <meta>
+               <lastUpdated value="2019-02-23T13:38:33.861+00:00"/>
+               <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1"/>
+            </meta>
+            <identifier>
+               <system value="https://tools.ietf.org/html/rfc4122"/>
+               <value value="49e65c66-8c9f-4d54-a90d-a556e0e43f04"/>
+            </identifier>
+            <clinicalStatus value="active"/>
+            <category>
+               <coding>
+                  <system value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1"/>
+                  <code value="encounter-diagnosis"/>
+                  <display value="Encounter Diagnosis"/>
+               </coding>
+               <text value="Encounter Diagnosis"/>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="401303003"/>
+                  <display value="Acute ST segment elevation myocardial infarction"/>
+               </coding>
+               <text value="Acute ST segment elevation myocardial infarction"/>
+            </code>
+           <subject>
+               <reference value="urn:uuid:2f88064f-8dc3-4763-af75-94faf6b08b18"></reference>
+            </subject>
+         </Condition>
+      </resource>
+   </entry>
+</Bundle>

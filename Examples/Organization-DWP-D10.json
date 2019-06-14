@@ -1,0 +1,23 @@
+{
+    "resourceType": "Organization",
+    "identifier": [
+        {
+            "system": "https://fhir.gov.uk/Id/government-organisation",
+            "value": "D10"
+        }
+    ],
+    "active": true,
+    "name": "Department of Work and Pensions",
+    "address": [
+        {
+            "line": [
+                "1W09, 1ST FLOOR, QUARRY HOUSE",
+                "QUARRY HILL"
+            ],
+            "city": "LEEDS",
+            "district": "WEST YORKSHIRE",
+            "postalCode": "LS2 7UE",
+            "country": "ENGLAND"
+        }
+    ]
+}

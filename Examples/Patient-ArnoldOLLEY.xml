@@ -1,0 +1,34 @@
+<Patient xmlns="http://hl7.org/fhir">
+    <identifier>
+        <system value="https://fhir.gov.uk/Id/ni-number"/>
+        <value value="YY448570B"/>
+    </identifier>
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/nhs-number"></system>
+        <value value="9658218903"></value>
+    </identifier>
+    <name>
+        <use value="official"></use>
+        <text value="Arnold OLLEY"></text>
+        <family value="OLLEY"></family>
+        <given value="Arnold"></given>
+        <prefix value="MR"></prefix>
+    </name>
+    <telecom>
+        <system value="email"></system>
+        <value value="mayfield.g.kev@gmail.com"></value>
+        <use value="home"></use>
+    </telecom>
+    <gender value="male"></gender>
+    <birthDate value="1939-07-21"></birthDate>
+    <address>
+        <use value="home"></use>
+        <type value="physical"></type>
+        <line value="1 Ada Glassby Court"></line>
+        <line value="Austhorpe"></line>
+        <city value="Leeds"></city>
+        <district value="W YORKS"></district>
+        <postalCode value="LS15 8FR"></postalCode>
+    </address>
+    <active value="true"/>
+</Patient> 

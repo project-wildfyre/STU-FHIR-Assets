@@ -1,0 +1,23 @@
+{
+  "resourceType": "NamingSystem",
+  "meta": {
+    "profile": [
+      "https://fhir.nhs.uk/STU3/StructureDefinition/NHSDigital-NamingSystem-1"
+    ]
+  },
+  "name": "National Insurance Number",
+  "status": "draft",
+  "kind": "identifier",
+  "date": "2019-05-21",
+  "publisher": "Department of Work and Pensions",
+  "responsible": "HM Revenue and Customs",
+  "description": "The National Insurance number is a number used in the United Kingdom in the administration of the National Insurance or social security system. It is also used for some purposes in the UK tax system. The number is described by the United Kingdom government as a 'personal account number'.",
+  "usage": "Is used by many government organisations in the UK including HMRC, DWP, local councils and employers",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "https://fhir.gov.uk/Id/ni-number",
+      "preferred": true
+    }
+  ]
+}

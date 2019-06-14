@@ -1,0 +1,71 @@
+{
+    "resourceType": "Task",
+    "identifier": [
+        {
+            "system": "https://fhir.gov.uk/Id/Task",
+            "value": "6912345"
+        }
+    ],
+    "status": "requested",
+    "code": {
+        "coding": [
+            {
+                "system": "https://fhir.gov.uk/CodeSystem/TaskCode",
+                "code": "esa113"
+            }
+        ]
+      },
+    "focus": {
+        "identifier": {
+            "system": "https://fhir.gov.uk/Id/Claim",
+            "value": "9612345"
+        }
+    },
+    "for": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9658218873"
+        }
+    },
+    "authored": "2019-05-28",
+    "requester": {
+        "agent": {
+            "identifier": {
+                "system": "https://fhir.gov.uk/Id/government-organisation",
+                "value": "D10"
+            },
+            "display": "DWP"
+        }
+    },
+    "performerType": [
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/task-performer-type",
+                    "code": "performer",
+                    "display": "Performer"
+                }
+            ],
+            "text": "Performer"
+        }
+    ],
+    "owner": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/sds-user-id",
+            "value": "G13579135"
+        }
+    },
+    "input": [
+        {
+            "type": {
+                "text": "Complete Questionnaire"
+            },
+            "valueReference": {
+                "identifier": {
+                    "system": "https://fhir.gov.uk/DWP/Questionnaire",
+                    "value": "esa113"
+                }
+            }
+        }
+    ]
+}

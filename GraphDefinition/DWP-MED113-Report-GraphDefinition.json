@@ -1,0 +1,96 @@
+{
+    "resourceType": "GraphDefinition",
+    "url": "http://fhir.gov.uk/GraphDefinition/DWP-MED113Report-1",
+    "name": "DWP MED113 Report",
+    "status": "draft",
+    "date": "2019-06-02T00:00:00+00:00",
+    "publisher": "Department for Work and Pensions",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://fhir.gov.uk"
+                }
+            ]
+        }
+    ],
+    "description": "A Graph Definition Medical Report",
+    "start": "Composition",
+    "profile": "https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-MH-Composition-1",
+    "link": [
+        {
+            "path": "Composition.section.entry",
+            "sliceName": "patientDemographicsSection",
+            "min": "1",
+            "max": "1",
+            "description": "Patient Demographics Section",
+            "target": [
+                {
+                    "type": "Patient",
+                    "profile": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1"
+            
+                }
+            ]
+        },
+        {
+            "path": "Composition.section.entry",
+            "sliceName": "diagnosisSection",
+            "min": "1",
+            "max": "1",
+            "description": "Structured Conditions are not a requirement",
+            "target": [
+                {
+                    "type": "Condition",
+                    "profile": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1"
+            
+                }
+            ]
+        },
+        {
+            "path": "Composition.section.entry",
+            "sliceName": "medicationsAndMedicalDevicesSection",
+            "min": "1",
+            "max": "1",
+            "description": "Medication (Current)",
+            "target": [
+                {
+                    "type": "MedicationStatement",
+                    "profile": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1"
+            
+                }
+            ]
+        },
+        {
+            "path": "Composition.section.entry",
+            "sliceName": "planAndRequestedActionsSection",
+            "min": "0",
+            "max": "1",
+            "description": "Management",
+            "target": [
+                {
+                    "type": "CarePlan"
+                }
+            ]
+        },
+        {
+            "path": "Composition.section.entry",
+            "sliceName": "investigationResultsSection",
+            "min": "1",
+            "max": "1",
+            "description": "Investigations",
+            "target": [
+                {
+                    "type": "DiagnosticReport"
+                }
+            ]
+        },
+        {
+            "path": "Composition.section.entry",
+            "sliceName": "clinicalSummarySection",
+            "min": "0",
+            "max": "1",
+            "description": "Signs and Symptoms??"
+        }
+    ]
+}
