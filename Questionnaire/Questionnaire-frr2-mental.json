@@ -1,5 +1,6 @@
 {
     "resourceType": "Questionnaire",
+    "id" : "4",
     "meta": {
         "lastUpdated": "2019-04-05T10:00:59.405+00:00"
     },
@@ -32,207 +33,7 @@
                     }
                 }
             ],
-            "linkId": "4.1",
-            "code": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "719232003",
-                    "display": "Difficulty walking"
-                }
-            ],
-            "text": "Difficulty walking",
-            "type": "reference",
-            "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                    "valueCode": "Observation"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
-                    "valueReference": {
-                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
-                    }
-                }
-            ],
-            "linkId": "4.2",
-            "code": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "302002000",
-                    "display": "Difficulty moving"
-                }
-            ],
-            "text": "Difficulty moving",
-            "type": "reference",
-            "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                    "valueCode": "Observation"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
-                    "valueReference": {
-                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
-                    }
-                }
-            ],
-            "linkId": "4.3",
-            "code": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "714882001",
-                    "display": "Finding related to ability to transfer location"
-                }
-            ],
-            "text": "Finding related to ability to transfer location",
-            "type": "reference",
-            "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                    "valueCode": "Observation"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
-                    "valueReference": {
-                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
-                    }
-                }
-            ],
-            "linkId": "4.4",
-            "code": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "364881003",
-                    "display": "Finding related to ability to reach"
-                }
-            ],
-            "text": "Finding related to ability to reach",
-            "type": "reference",
-            "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                    "valueCode": "Observation"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
-                    "valueReference": {
-                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
-                    }
-                }
-            ],
-            "linkId": "4.5",
-            "code": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "365145008",
-                    "display": "Finding related to ability to pick up objects"
-                }
-            ],
-            "text": "Finding related to ability to pick up objects",
-            "type": "reference",
-            "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                    "valueCode": "Observation"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
-                    "valueReference": {
-                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
-                    }
-                }
-            ],
-            "linkId": "4.6",
-            "code": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "364972005",
-                    "display": "Finding related to ability to perform hand functions"
-                }
-            ],
-            "text": "Finding related to ability to perform hand functions",
-            "type": "reference",
-            "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                    "valueCode": "Observation"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
-                    "valueReference": {
-                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
-                    }
-                }
-            ],
-            "linkId": "4.7",
-            "code": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "118231006",
-                    "display": "Communication finding"
-                }
-            ],
-            "text": "Communication finding",
-            "type": "reference",
-            "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                    "valueCode": "Observation"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
-                    "valueReference": {
-                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
-                    }
-                }
-            ],
-            "linkId": "4.8",
-            "code": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "300387008",
-                    "display": "Finding of bowel continence"
-                }
-            ],
-            "text": "Finding of bowel continence",
-            "type": "reference",
-            "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                    "valueCode": "Observation"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
-                    "valueReference": {
-                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
-                    }
-                }
-            ],
-            "linkId": "4.9",
+            "linkId": "activity-11",
             "code": [
                 {
                     "system": "http://snomed.info/sct",
@@ -257,7 +58,7 @@
                     }
                 }
             ],
-            "linkId": "4.10",
+            "linkId": "activity-12",
             "code": [
                 {
                     "system": "http://snomed.info/sct",
@@ -282,7 +83,7 @@
                     }
                 }
             ],
-            "linkId": "4.11",
+            "linkId": "activity-16",
             "code": [
                 {
                     "system": "http://snomed.info/sct",
@@ -307,7 +108,7 @@
                     }
                 }
             ],
-            "linkId": "4.12",
+            "linkId": "activity-17",
             "code": [
                 {
                     "system": "http://snomed.info/sct",
@@ -318,68 +119,6 @@
             "text": "Difficulty recognising social cues",
             "type": "reference",
             "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                    "valueCode": "Observation"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
-                    "valueReference": {
-                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
-                    }
-                }
-            ],
-            "linkId": "4.13",
-            "code": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "110292000",
-                    "display": "Difficulty eating"
-                }
-            ],
-            "text": "Difficulty eating",
-            "type": "reference",
-            "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                    "valueCode": "Observation"
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
-                    "valueReference": {
-                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
-                    }
-                }
-            ],
-            "linkId": "4.14",
-            "code": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "364778002",
-                    "display": "Finding of drinking ability"
-                }
-            ],
-            "text": "Finding of drinking ability",
-            "type": "reference",
-            "repeats": true
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/designNote",
-                    "valueMarkdown": "Provide a brief explanation if your patient has difficulties with any of the following activities:"
-                }
-            ],
-            "linkId": "4.15",
-            "text": "Difficulties Notes",
-            "type": "string",
-            "repeats": false
         }
     ]
 }
