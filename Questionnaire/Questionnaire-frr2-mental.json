@@ -58,7 +58,7 @@
                     }
                 }
             ],
-            "linkId": "activity-12",
+            "linkId": "activity-12a",
             "code": [
                 {
                     "system": "http://snomed.info/sct",
@@ -69,6 +69,31 @@
             "text": "Non-awareness of common dangers",
             "type": "reference",
             "repeats": true
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                    "valueCode": "Observation"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedProfile",
+                    "valueReference": {
+                        "reference": "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+                    }
+                }
+            ],
+            "linkId": "activity-12b",
+            "code": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "225313009",
+                    "display": "Supervision"
+                }
+            ],
+            "text": "Supervision",
+            "type": "reference",
+            "repeats": false
         },
         {
             "extension": [

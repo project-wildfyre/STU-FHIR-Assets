@@ -9,7 +9,10 @@
             }
         ]
     },
+    "permittedDataType": [
+        "CodeableConcept"
+    ],
     "validCodedValueSet": {
-    	"reference": "https://fhir.gov.uk/STU3/ValueSet/GOV-HazardAwarenessSnCT-1"
+        "reference": "https://fhir.gov.uk/STU3/ValueSet/GOV-HazardAwarenessSnCT-1"
     }
 }

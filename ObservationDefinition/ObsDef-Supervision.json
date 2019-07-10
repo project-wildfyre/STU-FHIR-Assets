@@ -4,11 +4,14 @@
         "coding": [
             {
                 "system": "http://snomed.info/sct",
-                "code": "225313009",
+                "code": "   ",
                 "display": "Supervision"
             }
         ]
     },
+    "permittedDataType": [
+        "CodeableConcept"
+    ],
     "validCodedValueSet": {
     	"reference": "https://fhir.gov.uk/STU3/ValueSet/GOV-SupervisionSnCT-1"
     }

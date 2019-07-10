@@ -10,6 +10,9 @@
             }
         ]
     },
+    "permittedDataType": [
+        "CodeableConcept"
+    ],
     "validCodedValueSet": {
     	"reference": "https://fhir.gov.uk/STU3/ValueSet/GOV-LearningFindingSnCT-1"
     }
