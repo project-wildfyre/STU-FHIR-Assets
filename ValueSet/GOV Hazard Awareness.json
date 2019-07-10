@@ -1,0 +1,49 @@
+{
+    "resourceType": "ValueSet",
+    "url": "https://fhir.gov.uk/STU3/ValueSet/GOV-HazardAwarenessSnCT-1",
+    "version": "1.0.0",
+    "name": "GOV UK - Hazard Awareness",
+    "status": "draft",
+    "date": "2019-07-10T00:00:00+00:00",
+    "publisher": "GOV UK",
+    "description": "A code from the SNOMED Clinical Terminology UK coding system that describes the hazard awareness of a citizen.",
+    "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "248085007",
+              "display": "Lack of common sense about danger"
+            },
+            {
+              "code": "307093007",
+              "display": "Not aware of danger from deep water"
+            },
+            {
+              "code": "248082005",
+              "display": "Not aware of danger from falling from heights"
+            },
+            {
+              "code": "248076007",
+              "display": "Not aware of danger from hot objects"
+            },
+            {
+              "code": "248081003",
+              "display": "Not aware of danger from sharp objects"
+            }
+            ,
+            {
+              "code": "248084006",
+              "display": "Not aware of danger from strangers"
+            } ,
+            {
+              "code": "248083000",
+              "display": "Not aware of danger from traffic"
+            }
+          ]
+        }
+      ]
+    }
+  }

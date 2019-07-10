@@ -1,16 +1,15 @@
 {
     "resourceType": "ObservationDefinition",
-    "id" : "6",
     "code": {
         "coding": [
             {
                 "system": "http://snomed.info/sct",
-                "code": "106138009",
-                "display": "Learning Severity"
+                "code": "225313009",
+                "display": "Supervision"
             }
         ]
     },
     "validCodedValueSet": {
-    	"reference": "https://fhir.gov.uk/STU3/ValueSet/GOV-LearningFindingSnCT-1"
+    	"reference": "https://fhir.gov.uk/STU3/ValueSet/GOV-SupervisionSnCT-1"
     }
 }

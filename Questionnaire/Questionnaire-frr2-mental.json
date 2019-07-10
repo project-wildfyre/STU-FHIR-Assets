@@ -43,7 +43,7 @@
             ],
             "text": "Learning finding",
             "type": "reference",
-            "repeats": true
+            "repeats": false
         },
         {
             "extension": [
