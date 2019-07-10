@@ -1,0 +1,12 @@
+{
+    "resourceType": "ObservationDefinition",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "106138009",
+                "display": "Learning Severity"
+            }
+        ]
+    }
+}
