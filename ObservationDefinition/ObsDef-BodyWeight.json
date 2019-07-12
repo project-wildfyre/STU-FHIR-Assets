@@ -1,0 +1,26 @@
+{
+    "resourceType": "ObservationDefinition",
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/observation-category",
+            "code": "vital-signs",
+            "display": "Vital Signs"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "27113001",
+          "display": "Body Weight"
+        }
+      ]
+    },
+    "permittedDataType": [
+      "Quantity"
+    ]
+  }
